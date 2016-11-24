@@ -2,6 +2,7 @@ package com.org.iii.shine16;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -35,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
     //按鍵設定使用
     private class MyWebViewClient extends WebViewClient {
+    }
+
+    //使用B1來使用
+    public void test1(View v){
+        String name = "Eric";
+        webView.loadUrl("javaScript:test1('"+name+"')");
     }
 
 }

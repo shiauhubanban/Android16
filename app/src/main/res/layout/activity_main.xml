@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="B1"
+            android:onClick="test1"
             />
         <Button
             android:layout_width="match_parent"
