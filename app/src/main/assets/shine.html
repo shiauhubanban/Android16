@@ -4,13 +4,15 @@
         here.innerHTML=parseInt(Math.random()*49+1);
     }
     function test1(urname){
+        //呈現在android畫面
         var here = document.getElementById('here');
         here.innerHTML= "Hello, " + urname ;
     }
     function test2(){
-        //var here = document.getElementById('here');
+        //呈現在android畫面
+        var here = document.getElementById('here');
         var urname = document.getElementById('urname');
-        //here.innerHTML= urname.value ;
+        here.innerHTML= urname.value ;
 
         //丟值
         mark.showUrName(urname.value);
