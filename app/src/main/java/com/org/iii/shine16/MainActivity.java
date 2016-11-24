@@ -2,7 +2,9 @@ package com.org.iii.shine16;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
 
+
+        webView.addJavascriptInterface(new ShineJS(),"mark");
         //1.
         //webView.loadUrl("http://taichung.iiiedu.org.tw/");
         //2.   //後面的/是根目錄
@@ -42,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
     public void test1(View v){
         String name = "Eric";
         webView.loadUrl("javaScript:test1('"+name+"')");
+    }
+
+    private class ShineJS{
+        //把字串往上丟
+        @JavascriptInterface
+        public void showUrName(String myname){
+            Log.v("shine", "OK:" +myname);
+        }
     }
 
 }
