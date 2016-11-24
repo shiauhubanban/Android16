@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private class MyWebViewClient extends WebViewClient {
     }
 
-    //使用B1來使用
+    //使用B1按鈕來使用 使用javaScript的功用
     public void test1(View v){
         String name = "Eric";
         webView.loadUrl("javaScript:test1('"+name+"')");

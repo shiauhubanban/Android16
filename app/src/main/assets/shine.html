@@ -7,6 +7,11 @@
         var here = document.getElementById('here');
         here.innerHTML= "Hello, " + urname ;
     }
+    function test2(){
+        //var here = document.getElementById('here');
+        var urname = document.getElementById('urname');
+        //here.innerHTML= urname.value ;
+    }
 </script>
 
 
@@ -15,5 +20,7 @@
 Hello,World
 <input type="button" onclick="click1()" value="click1" />
 <input type="button" onclick='test1("shine")' value="click2" />
+<input type="text" id="urname" />
+<input type='button' onclick='test2()' value="Click3" /><br />
 <div id ="here"></div>
 <a href='http://tw.yahoo.com'>Yahoo</a>
