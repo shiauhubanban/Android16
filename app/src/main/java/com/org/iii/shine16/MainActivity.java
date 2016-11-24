@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         //webView.loadUrl("http://taichung.iiiedu.org.tw/");
         //2.   //後面的/是根目錄
         webView.loadUrl("file:///android_asset/shine.html");
-
+        //3.
+        //webView.loadData("<h1>SHINE</h1>","text/html;charset=utf-8",null);
     }
 }
