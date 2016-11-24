@@ -2,7 +2,9 @@ package com.org.iii.shine16;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
     private WebView webView;
@@ -15,6 +17,14 @@ public class MainActivity extends AppCompatActivity {
         initWebView();
     }
     private void initWebView(){
+        //保留上面按鈕用
+        MyWebViewClient client = new MyWebViewClient();
+        webView.setWebViewClient(client);
+
+        //設定JAVASCRIPT可以使用
+        WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);
+
         //1.
         //webView.loadUrl("http://taichung.iiiedu.org.tw/");
         //2.   //後面的/是根目錄
@@ -22,4 +32,9 @@ public class MainActivity extends AppCompatActivity {
         //3.
         //webView.loadData("<h1>SHINE</h1>","text/html;charset=utf-8",null);
     }
+
+    //按鍵設定使用
+    private class MyWebViewClient extends WebViewClient {
+    }
+
 }
